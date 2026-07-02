@@ -678,6 +678,37 @@ em { color: inherit; }
   border-radius: 50%;
 }
 
+/* ---- Season small multiples ---- */
+.uc-season-row {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.uc-season-row figure {
+  flex: 1;
+  margin: 0;
+}
+
+.uc-season-row img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--uc-shadow);
+}
+
+.uc-season-cap {
+  margin-top: 0.45rem;
+  text-align: center;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--uc-muted);
+}
+
+.uc-season-cap strong {
+  color: var(--uc-navy);
+}
+
 /* ---- Architecture and real work ---- */
 .uc-architecture {
   display: grid;

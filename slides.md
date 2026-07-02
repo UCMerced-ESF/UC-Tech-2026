@@ -89,8 +89,8 @@ farm into a living data system.
 <div class="uc-stat-stack">
 
 <div class="uc-stat"><span class="uc-stat-num">28</span><span class="uc-stat-label">fields tracked on the farm today</span></div>
-<div class="uc-stat"><span class="uc-stat-num">40.4</span><span class="uc-stat-label">acres under active management</span></div>
-<div class="uc-stat"><span class="uc-stat-num">87%</span><span class="uc-stat-label">of field capacity in use right now</span></div>
+<div class="uc-stat"><span class="uc-stat-num">40.6</span><span class="uc-stat-label">acres under active management</span></div>
+<div class="uc-stat"><span class="uc-stat-num">75%</span><span class="uc-stat-label">of field capacity in use right now</span></div>
 
 </div>
 
@@ -431,6 +431,31 @@ One drone flight <strong>(Apr 28)</strong> plus one LiDAR pass <strong>(Jan 22)<
 layout: default
 ---
 
+# Watching the season turn
+
+<div class="uc-season-row mt-9">
+  <figure>
+    <img src="/farm/generated/season-jan.jpg" alt="NDVI, January 20: mixed winter cover, east beds bare">
+    <figcaption class="uc-season-cap"><strong>January 20</strong> · winter cover</figcaption>
+  </figure>
+  <figure>
+    <img src="/farm/generated/season-mar.jpg" alt="NDVI, March 25: peak green across nearly every field">
+    <figcaption class="uc-season-cap"><strong>March 25</strong> · peak green</figcaption>
+  </figure>
+  <figure>
+    <img src="/farm/generated/season-apr.jpg" alt="NDVI, April 28: west beds turned bare, east beds newly planted">
+    <figcaption class="uc-season-cap"><strong>April 28</strong> · beds turned</figcaption>
+  </figure>
+</div>
+
+<div class="uc-callout mt-6">
+Same fields, same NDVI scale, three flights apart. Every flight lands in the archive — <strong>aligned and comparable</strong>.
+</div>
+
+---
+layout: default
+---
+
 # What it looks like today
 
 <div class="uc-proof-shot mt-4">
@@ -450,7 +475,7 @@ layout: default
 <div class="uc-dual-shot-grid">
 
 <div class="uc-dual-shot">
-<img src="/app/esf-field-management.jpg" alt="FarmKit field management dashboard showing 30 fields, 40.4 acres of coverage, and 87% utilization">
+<img src="/app/esf-field-management.jpg" alt="FarmKit field management dashboard showing 28 fields, 40.6 acres of coverage, and 75% utilization">
 <div class="uc-dual-shot-cap">
 <h4>Field management</h4>
 <p>Every boundary, crop, and season tracked in one place — the bookkeeping layer FarmLink's unify step builds on.</p>
