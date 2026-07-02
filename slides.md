@@ -560,6 +560,28 @@ a long-term baseline.
 layout: default
 ---
 
+# Sampling the ground truth
+
+<div class="uc-season-row mt-8">
+  <figure>
+    <img src="/farm/generated/soil-grid.jpg" alt="212 soil sample points colored by lab pH over the July 2025 drone orthomosaic, with field boundaries outlined">
+  </figure>
+</div>
+
+<div class="uc-layer-labels mt-2">
+  <div><span class="uc-dot" style="background:#e3aa2f"></span>Acidic · pH 5.4</div>
+  <div><span class="uc-dot" style="background:#f6f1e4; border:1px solid #00285655"></span>Median · 6.2</div>
+  <div><span class="uc-dot" style="background:#002856"></span>Alkaline · 7.6</div>
+</div>
+
+<div class="uc-callout mt-4">
+<strong>212 grid points</strong>, each cored at two depths in summer 2025 — lab chemistry mapped back to the exact spot it came from.
+</div>
+
+---
+layout: default
+---
+
 # Example: decades of context, on tap
 
 <div class="uc-context-slide mt-4">

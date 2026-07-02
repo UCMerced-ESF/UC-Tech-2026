@@ -34,10 +34,11 @@ Assets to collect for the UC Tech 2026 presentation. Drop new files into
   fixed scale, slide 16 "Watching the season turn".
 - [x] **G3. Thermal vs true-color pair** — DONE (Jul 2): 21–31 °C surface temp,
   slide 17 "Seeing what the eye can't".
-- [ ] **G4. Soil sampling grid map** — 192 grid points + field boundaries over
-  the RGB ortho in deck colors. → "Grounded in real data work" slide's empty
-  column; covers the map half of screenshot #3. Consider adding the 26 eDNA
-  sample points as a second point class — unique science story for free.
+- [x] **G4. Soil sampling grid map** — DONE (Jul 2): 212 summer-2025 grid
+  samples colored by lab pH over the July 16 2025 ortho, field boundaries
+  outlined; own slide "Sampling the ground truth" after "Grounded in real data
+  work". Covers the map half of screenshot #3. (eDNA points skipped — would
+  clutter; revisit if a soil-science slide appears.)
 - [ ] **G5. Full-farm ortho hero** — the whole Apr 28 mosaic; covers photo #7
   and retires a duplicate. → Slide 4 drone card and/or a section background.
 - [ ] **G6. Resolution punch-in** — full farm → one orchard row → individual
