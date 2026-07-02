@@ -456,6 +456,27 @@ Same fields, same NDVI scale, three flights apart. Every flight lands in the arc
 layout: default
 ---
 
+# Seeing what the eye can't
+
+<div class="uc-season-row mt-9">
+  <figure>
+    <img src="/farm/generated/pair-rgb.jpg" alt="True-color aerial view: orchard, row crops, and equipment yard all reading as ordinary green farmland">
+    <figcaption class="uc-season-cap"><strong>True color</strong> · everything looks fine</figcaption>
+  </figure>
+  <figure>
+    <img src="/farm/generated/pair-thermal.jpg" alt="Thermal view of the identical scene: irrigated rows and orchard cold blue, dry furrows, roads, and cut hay glowing hot">
+    <figcaption class="uc-season-cap"><strong>Surface temperature</strong> · 21–31&nbsp;°C</figcaption>
+  </figure>
+</div>
+
+<div class="uc-callout mt-6">
+Irrigated ground holds <strong>21&nbsp;°C</strong> while cut hay bakes at <strong>31</strong> — water management, visible only from the air.
+</div>
+
+---
+layout: default
+---
+
 # What it looks like today
 
 <div class="uc-proof-shot mt-4">
