@@ -479,12 +479,12 @@ layout: default
 
 # What it looks like today
 
-<div class="uc-proof-shot mt-4">
+<div class="uc-proof-shot mt-3">
 <img src="/app/esf-platform-home.jpg" alt="FarmKit: the Experimental Smart Farm's live field map and imagery browser, showing field boundaries, crop labels, and imagery history">
 </div>
 
-<div class="uc-callout mt-4">
-This is <strong>FarmKit</strong>, the farm's live field map — already tracking 28+ fields, crop types, and a dated imagery history. FarmLink's unified layer builds on exactly this foundation.
+<div class="uc-callout mt-3">
+This is <strong>FarmKit</strong>, the farm's live field map — the foundation FarmLink's unified layer builds on.
 </div>
 
 ---

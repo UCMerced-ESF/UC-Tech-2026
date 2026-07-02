@@ -801,7 +801,7 @@ em { color: inherit; }
 
 .uc-proof-shot {
   overflow: hidden;
-  height: 19.5rem;
+  height: 18.5rem;
   border: 1px solid var(--uc-line);
   border-radius: 8px;
   background: rgba(255, 253, 248, 0.82);

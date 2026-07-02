@@ -16,10 +16,9 @@ Assets to collect for the UC Tech 2026 presentation. Drop new files into
   → New material for slide 17 ("Grounded in real data work"); headline paper capability, currently invisible in deck.
 - [ ] **4. Mobile app screenshot** — field view in a phone frame (or see photo #8).
   → Deck currently only shows desktop web; paper touts native mobile clients.
-- [ ] **5. Equipment dashboard on an active day** — recapture when utilization
-  and active users are non-zero (current shot shows 0% / "All caught up!"),
-  or crop to the top stat cards.
-  → Replaces right screenshot on slide 16 ("The day-to-day, already tracked").
+- [x] **5. Equipment dashboard on an active day** — DONE (Jul 2): replaced with
+  Equipment Inventory page showing actual equipment by yard (140 total / 138
+  available). Empty-state "All caught up!" dashboard retired.
 - [ ] **6. Time-series chart of the 47-year climate record** — one August
   highlighted against the long-term ET/weather baseline.
   → Slide 18 ("decades of context, on tap") — lands the "dry, or dry *for an August*?" quote.
