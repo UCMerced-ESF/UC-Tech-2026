@@ -569,9 +569,9 @@ layout: default
 </div>
 
 <div class="uc-layer-labels mt-2">
-  <div><span class="uc-dot" style="background:#e3aa2f"></span>Acidic · pH 5.4</div>
-  <div><span class="uc-dot" style="background:#f6f1e4; border:1px solid #00285655"></span>Median · 6.2</div>
-  <div><span class="uc-dot" style="background:#002856"></span>Alkaline · 7.6</div>
+  <div><span class="uc-dot" style="background:#ffadad"></span>Acidic · pH 5.4</div>
+  <div><span class="uc-dot" style="background:#190c09"></span>Median · 6.2</div>
+  <div><span class="uc-dot" style="background:#9eb0ff"></span>Alkaline · 7.6</div>
 </div>
 
 <div class="uc-callout mt-4">
