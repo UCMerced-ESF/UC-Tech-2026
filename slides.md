@@ -443,8 +443,8 @@ layout: default
     <figcaption class="uc-season-cap"><strong>March 25</strong> · peak green</figcaption>
   </figure>
   <figure>
-    <img src="/farm/generated/season-apr.jpg" alt="NDVI, April 28: west beds turned bare, east beds newly planted">
-    <figcaption class="uc-season-cap"><strong>April 28</strong> · beds turned</figcaption>
+    <img src="/farm/generated/season-apr.jpg" alt="NDVI, April 28: cut hay drying in windrows before baling">
+    <figcaption class="uc-season-cap"><strong>April 28</strong> · hay drying</figcaption>
   </figure>
 </div>
 
