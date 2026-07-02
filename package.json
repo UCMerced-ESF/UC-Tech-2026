@@ -1,0 +1,19 @@
+{
+  "name": "farmlink-deck",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.49.29",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/theme-seriph": "^0.25.0",
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.61.1"
+  }
+}

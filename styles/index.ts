@@ -1,0 +1,1 @@
+import './uc-merced.css'
