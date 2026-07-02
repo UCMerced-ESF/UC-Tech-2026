@@ -405,22 +405,22 @@ The hard, reusable work lives in the middle: <strong>ingest &amp; standardize</s
 layout: default
 ---
 
-# One farm, five ways to see it
+# One farm, many ways to see it
 
 <div class="uc-layerstack mt-4">
   <img src="/farm/generated/layer-terrain.jpg" alt="LiDAR terrain hillshade" style="clip-path: polygon(0 0, 23.3% 0, 16.3% 100%, 0 100%)">
   <img src="/farm/generated/layer-canopy.jpg" alt="LiDAR canopy height" style="clip-path: polygon(23.7% 0, 43.3% 0, 36.3% 100%, 16.7% 100%)">
-  <img src="/farm/generated/layer-rgb.jpg" alt="True-color drone orthomosaic" style="clip-path: polygon(43.7% 0, 63.3% 0, 56.3% 100%, 36.7% 100%)">
+  <img src="/farm/generated/layer-ndvi.jpg" alt="NDVI vegetation index" style="clip-path: polygon(43.7% 0, 63.3% 0, 56.3% 100%, 36.7% 100%)">
   <img src="/farm/generated/layer-thermal.jpg" alt="Thermal surface temperature" style="clip-path: polygon(63.7% 0, 83.3% 0, 76.3% 100%, 56.7% 100%)">
-  <img src="/farm/generated/layer-ndvi.jpg" alt="NDVI vegetation index" style="clip-path: polygon(83.7% 0, 100% 0, 100% 100%, 76.7% 100%)">
+  <img src="/farm/generated/layer-rgb.jpg" alt="True-color drone orthomosaic" style="clip-path: polygon(83.7% 0, 100% 0, 100% 100%, 76.7% 100%)">
 </div>
 
 <div class="uc-layer-labels">
   <div><span class="uc-dot" style="background:#8fa3bc"></span>LiDAR terrain</div>
   <div><span class="uc-dot" style="background:#e3aa2f"></span>Canopy height</div>
-  <div><span class="uc-dot" style="background:#3f5e43"></span>True color</div>
-  <div><span class="uc-dot" style="background:#c04a2e"></span>Thermal</div>
   <div><span class="uc-dot" style="background:#489b53"></span>NDVI</div>
+  <div><span class="uc-dot" style="background:#c04a2e"></span>Thermal</div>
+  <div><span class="uc-dot" style="background:#3f5e43"></span>True color</div>
 </div>
 
 <div class="uc-callout mt-3">
