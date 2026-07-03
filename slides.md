@@ -417,9 +417,9 @@ layout: default
 
 <div class="uc-layer-labels">
   <div><span class="uc-dot" style="background:#8fa3bc"></span>LiDAR terrain</div>
-  <div><span class="uc-dot" style="background:#e3aa2f"></span>Canopy height</div>
-  <div><span class="uc-dot" style="background:#489b53"></span>NDVI</div>
-  <div><span class="uc-dot" style="background:#c04a2e"></span>Thermal</div>
+  <div><span class="uc-dot" style="background:#f29d6d"></span>Canopy height</div>
+  <div><span class="uc-dot" style="background:#2b5a34"></span>NDVI</div>
+  <div><span class="uc-dot" style="background:#de744f"></span>Thermal</div>
   <div><span class="uc-dot" style="background:#3f5e43"></span>True color</div>
 </div>
 
