@@ -6,10 +6,8 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 // token lives in .env (gitignored): VITE_MAPBOX_TOKEN=pk.…
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
 
-// TiTiler reached via the Vite dev proxy (see vite.config.ts) to dodge the
-// platform's doubled CORS header on tile responses
 const TITILER_ITEM =
-  '/esf-titiler/collections/esf-multispectral/items/c9484c78-b648-42a8-8643-32a20e750d7e'
+  'https://esf.ucmerced.edu/api/titiler/collections/esf-multispectral/items/c9484c78-b648-42a8-8643-32a20e750d7e'
 const FIELDS_URL = 'https://esf.ucmerced.edu/api/export/fields.geojson'
 // bbox of the March 25 flight, from its STAC record
 const BOUNDS = [-120.41709, 37.35314, -120.40539, 37.35838]
