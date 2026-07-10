@@ -4,3 +4,5 @@ dist/
 *.log
 slides-export.pdf
 .DS_Store
+tmp/
+.env
