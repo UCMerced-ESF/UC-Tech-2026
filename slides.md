@@ -271,22 +271,19 @@ layout: default
 <div class="uc-aud">
 <img class="uc-aud-photo" src="/farm/soil-sample-team-2000w.jpg" alt="UC Merced researchers soil sampling in the field">
 <h3>Researchers</h3>
-A reliable, shared substrate for cross-stream questions — and data that
-outlives any single project or grad student.
+A shared foundation for cross-stream questions that outlives any one project.
 </div>
 
 <div class="uc-aud">
 <img class="uc-aud-photo" src="/farm/kat-inspecting-plants-2000w.jpg" alt="A student inspecting plants up close in the greenhouse">
 <h3>Students</h3>
-A way in. Explore real, current farm data without first learning four
-specialist toolchains.
+Explore real farm data without first learning specialist toolchains.
 </div>
 
 <div class="uc-aud">
 <img class="uc-aud-photo" src="/farm/farm-manager-2000w.jpg" alt="A Central Valley grower walking a field next to a truck">
 <h3>Central Valley growers</h3>
-Insight from a working farm in their own region — research that connects
-back to the people farming next door.
+Regional research that connects directly back to the people farming next door.
 </div>
 
 </div>
@@ -516,7 +513,7 @@ layout: default
 <img src="/app/esf-field-management.jpg" alt="FarmKit field management dashboard showing 28 fields, 40.6 acres of coverage, and 75% utilization">
 <div class="uc-dual-shot-cap">
 <h4>Field management</h4>
-<p>Every boundary, crop, and season tracked in one place — the bookkeeping layer FarmLink's unify step builds on.</p>
+<p>Boundaries, crops, and seasons tracked in one place.</p>
 </div>
 </div>
 
@@ -524,7 +521,7 @@ layout: default
 <img src="/app/esf-equipment-management.jpg" alt="FarmKit equipment management dashboard showing 140 pieces of equipment across 18 locations">
 <div class="uc-dual-shot-cap">
 <h4>Equipment &amp; inventory</h4>
-<p>140 pieces of equipment checked in and out across 18 locations — operations data, not just sensor data.</p>
+<p>140 assets tracked across 18 locations — operations data, not just sensor data.</p>
 </div>
 </div>
 
@@ -604,22 +601,22 @@ layout: default
 
 <div class="uc-tl-item">
 <div class="uc-tl-dot"></div>
-<div class="uc-tl-body"><h4>AI-assisted capture</h4>Voice and photo entry turn a field note into structured data while the work is happening.</div>
+<div class="uc-tl-body"><h4>AI-assisted capture</h4>Turn voice and photo entry into structured field records.</div>
 </div>
 
 <div class="uc-tl-item">
 <div class="uc-tl-dot"></div>
-<div class="uc-tl-body"><h4>Ask the farm</h4>Natural-language queries connect fields, soil, irrigation, and imagery with answers tied to their sources.</div>
+<div class="uc-tl-body"><h4>Ask the farm</h4>Query fields, soil, irrigation, and imagery with source-linked answers.</div>
 </div>
 
 <div class="uc-tl-item">
 <div class="uc-tl-dot"></div>
-<div class="uc-tl-body"><h4>Publish more</h4>Expand the public catalog beyond boundaries, samples, and imagery to include activities and irrigation.</div>
+<div class="uc-tl-body"><h4>Publish more</h4>Add activity and irrigation records to the public catalog.</div>
 </div>
 
 <div class="uc-tl-item">
 <div class="uc-tl-dot"></div>
-<div class="uc-tl-body"><h4>Compute beside the data</h4>Give researchers integrated notebooks and jobs near the STAC and COG assets, without moving the files first.</div>
+<div class="uc-tl-body"><h4>Integrated compute</h4>Run notebooks and jobs beside STAC and COG data.</div>
 </div>
 
 </div>
@@ -627,8 +624,8 @@ layout: default
 <div class="uc-timeline-shot">
 <img src="/farm/weeding-robot-2000w.jpg" alt="An autonomous weeding robot being tested on the farm">
 <div class="uc-timeline-shot-cap">
-Every new instrument — like this autonomous weeding robot — should become a
-queryable, reusable stream instead of another one-off pipeline.
+Each new instrument — like this autonomous weeding robot — becomes a queryable,
+reusable stream.
 </div>
 </div>
 
