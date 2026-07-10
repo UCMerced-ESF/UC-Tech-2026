@@ -49,6 +49,11 @@ UC Tech 2026
 
 </div>
 
+<div class="uc-qr uc-qr-top">
+  <img src="/qr-deck.png" alt="QR code linking to this presentation">
+  <div>ucmerced-esf.github.io/UC-Tech-2026</div>
+</div>
+
 </div>
 
 <!--
@@ -169,7 +174,7 @@ equipment, field activities, samples, and archives.
 
 Each workflow has its own tools, formats, permissions, and local context.
 
-<div v-click="8" class="uc-silo-result">
+<div class="uc-silo-result">
 The issue is not that data is missing. It is that useful records become hard to
 <strong>find, interpret, and reuse</strong> after the original project moves on.
 </div>
@@ -179,15 +184,15 @@ The issue is not that data is missing. It is that useful records become hard to
 <div>
 
 <div class="uc-silos" aria-label="Fragmented data silos">
-<div v-click class="uc-silo uc-silo-imagery">Imagery</div>
-<div v-click class="uc-silo uc-silo-sensors">Sensor exports</div>
-<div v-click class="uc-silo uc-silo-rtk">RTK files</div>
-<div v-click class="uc-silo uc-silo-activity">Activity logs</div>
-<div v-click class="uc-silo uc-silo-samples">Samples</div>
-<div v-click class="uc-silo uc-silo-archives">Archives</div>
+<div class="uc-silo uc-silo-imagery">Imagery</div>
+<div class="uc-silo uc-silo-sensors">Sensor exports</div>
+<div class="uc-silo uc-silo-rtk">RTK files</div>
+<div class="uc-silo uc-silo-activity">Activity logs</div>
+<div class="uc-silo uc-silo-samples">Samples</div>
+<div class="uc-silo uc-silo-archives">Archives</div>
 </div>
 
-<div v-click class="uc-silo-caption">
+<div class="uc-silo-caption">
 Different collection paths. Different handoffs. No shared view of the farm.
 </div>
 
@@ -488,16 +493,20 @@ If the venue wifi dies, the previous slide shows the same idea statically.
 
 ---
 layout: default
+class: uc-proof-slide
 ---
 
-# What it looks like today
+# What FarmKit looks like today
 
 <div class="uc-proof-shot mt-3">
 <img src="/app/esf-platform-home.jpg" alt="FarmKit: the Experimental Smart Farm's live field map and imagery browser, showing field boundaries, crop labels, and imagery history">
 </div>
 
-<div class="uc-callout mt-3">
-This is <strong>FarmKit</strong>, the farm's live field map — the foundation FarmLink's unified layer builds on.
+<div class="uc-callout uc-callout-qr mt-3">
+<div>
+This is <strong>FarmKit</strong>, the farm's live field map — the foundation FarmLink's unified layer builds on. Live now at <strong>esf.ucmerced.edu</strong>.
+</div>
+<img src="/qr-esf.png" alt="QR code for esf.ucmerced.edu">
 </div>
 
 ---
@@ -592,6 +601,42 @@ layout: default
 
 ---
 layout: default
+class: uc-ai-demo-slide
+---
+
+# AI field capture · recorded demo
+
+<div class="uc-ai-demo mt-2">
+
+<div class="uc-ai-copy">
+
+Field work doesn't happen at a desk. The mobile app lets anyone **speak or
+type a note in the field** — and the platform's AI turns it into a structured,
+queryable record.
+
+<div class="uc-ai-steps mt-8">
+<div class="uc-ai-step"><span>01</span>Speak or type a note while the work is happening</div>
+<div class="uc-ai-step"><span>02</span>AI structures it — activity, field, crop, time</div>
+<div class="uc-ai-step"><span>03</span>It lands in the platform as data, not a memo</div>
+</div>
+
+</div>
+
+<div class="uc-ai-phone">
+<SlidevVideo autoplay controls autoreset="slide">
+  <source src="/app/ai-capture-demo.mp4" type="video/mp4" />
+</SlidevVideo>
+</div>
+
+</div>
+
+<!--
+Speaker notes: recorded demo, no audio — narrate over it. It autoplays when
+the slide appears, pauses and resets if you navigate away.
+-->
+
+---
+layout: default
 ---
 
 <h1 class="uc-roadmap-title">The next phase makes the data easier to use</h1>
@@ -655,6 +700,17 @@ and build on — and makes the approach reusable across UC.
 <div class="uc-presenter mt-10">
 Thank you · Questions welcome<br/>
 <span class="opacity-70">UC Tech 2026</span>
+</div>
+
+<div class="uc-qr uc-qr-row">
+  <div>
+    <img src="/qr-esf.png" alt="QR code linking to the live platform">
+    <div>esf.ucmerced.edu</div>
+  </div>
+  <div>
+    <img src="/qr-deck.png" alt="QR code linking to this presentation">
+    <div>ucmerced-esf.github.io/UC-Tech-2026</div>
+  </div>
 </div>
 
 <!--

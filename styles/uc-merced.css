@@ -798,20 +798,21 @@ em { color: inherit; }
 }
 
 .uc-proof-shot {
-  overflow: hidden;
-  height: 18.5rem;
-  border: 1px solid var(--uc-line);
-  border-radius: 8px;
-  background: rgba(255, 253, 248, 0.82);
-  box-shadow: var(--uc-shadow);
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .uc-proof-shot img {
   display: block;
-  width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border: 1px solid var(--uc-line);
+  border-radius: 8px;
+  box-shadow: var(--uc-shadow);
 }
 
 .uc-feed {
@@ -1242,7 +1243,8 @@ em { color: inherit; }
 }
 
 /* Live map slide */
-.slidev-layout.uc-livemap-slide {
+.slidev-layout.uc-livemap-slide,
+.slidev-layout.uc-proof-slide {
   display: flex;
   flex-direction: column;
 }
@@ -1252,7 +1254,9 @@ em { color: inherit; }
   min-height: 0;
 }
 
-.slidev-layout.uc-livemap-slide h1 {
+.slidev-layout.uc-livemap-slide h1,
+.slidev-layout.uc-proof-slide h1,
+.slidev-layout.uc-ai-demo-slide h1 {
   max-width: none;
   font-size: 2rem;
   margin-bottom: 0.4rem;
@@ -1300,4 +1304,102 @@ em { color: inherit; }
 }
 .uc-season-chip strong {
   color: var(--uc-gold);
+}
+
+/* AI capture demo slide */
+.slidev-layout.uc-ai-demo-slide {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1.75rem;
+}
+.uc-ai-demo {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: stretch;
+}
+.uc-ai-copy {
+  max-width: 34rem;
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+.uc-ai-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.uc-ai-step {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+}
+.uc-ai-step span {
+  font-weight: 800;
+  color: var(--uc-gold);
+  font-size: 0.85rem;
+}
+.uc-ai-phone {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+}
+.uc-ai-phone video {
+  height: 100%;
+  width: auto;
+  border-radius: 20px;
+  border: 3px solid #0e1621;
+  box-shadow: var(--uc-shadow);
+}
+
+/* ---- Deck QR code (cover + closing) ---- */
+.uc-qr {
+  position: absolute;
+  right: 1.6rem;
+  bottom: 1.6rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.uc-qr img {
+  width: 5.2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+.uc-qr div {
+  margin-top: 0.3rem;
+  font-size: 0.55rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.75);
+}
+.uc-qr-top {
+  bottom: auto;
+  top: 1.6rem;
+}
+.uc-qr-row {
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 1.1rem;
+}
+.uc-qr-row > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+}
+
+/* Callout with an inline QR (light slides) */
+.uc-callout-qr {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+.uc-callout-qr img {
+  width: 3.9rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
