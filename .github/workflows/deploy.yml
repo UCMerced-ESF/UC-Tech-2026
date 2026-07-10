@@ -28,6 +28,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx slidev build --base /UC-Tech-2026/
+        env:
+          VITE_MAPBOX_TOKEN: ${{ secrets.VITE_MAPBOX_TOKEN }}
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
