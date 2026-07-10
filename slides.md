@@ -60,6 +60,7 @@ into something people can actually explore and learn from.
 ---
 layout: section
 class: uc-section uc-section-photo uc-living
+transition: fade
 ---
 
 # A living research farm
@@ -88,9 +89,9 @@ farm into a living data system.
 
 <div class="uc-stat-stack">
 
-<div class="uc-stat"><span class="uc-stat-num">28</span><span class="uc-stat-label">fields tracked on the farm today</span></div>
-<div class="uc-stat"><span class="uc-stat-num">40.6</span><span class="uc-stat-label">acres under active management</span></div>
-<div class="uc-stat"><span class="uc-stat-num">75%</span><span class="uc-stat-label">of field capacity in use right now</span></div>
+<div class="uc-stat"><span class="uc-stat-num"><CountUp :to="28" /></span><span class="uc-stat-label">fields tracked on the farm today</span></div>
+<div class="uc-stat"><span class="uc-stat-num"><CountUp :to="40.6" :decimals="1" /></span><span class="uc-stat-label">acres under active management</span></div>
+<div class="uc-stat"><span class="uc-stat-num"><CountUp :to="75" suffix="%" /></span><span class="uc-stat-label">of field capacity in use right now</span></div>
 
 </div>
 
@@ -146,6 +147,7 @@ and <strong>distributed</strong> in a different way.
 ---
 layout: section
 class: uc-section uc-section-photo uc-problem
+transition: fade
 ---
 
 # The problem
@@ -167,7 +169,7 @@ equipment, field activities, samples, and archives.
 
 Each workflow has its own tools, formats, permissions, and local context.
 
-<div class="uc-silo-result">
+<div v-click="8" class="uc-silo-result">
 The issue is not that data is missing. It is that useful records become hard to
 <strong>find, interpret, and reuse</strong> after the original project moves on.
 </div>
@@ -177,15 +179,15 @@ The issue is not that data is missing. It is that useful records become hard to
 <div>
 
 <div class="uc-silos" aria-label="Fragmented data silos">
-<div class="uc-silo uc-silo-imagery">Imagery</div>
-<div class="uc-silo uc-silo-sensors">Sensor exports</div>
-<div class="uc-silo uc-silo-rtk">RTK files</div>
-<div class="uc-silo uc-silo-activity">Activity logs</div>
-<div class="uc-silo uc-silo-samples">Samples</div>
-<div class="uc-silo uc-silo-archives">Archives</div>
+<div v-click class="uc-silo uc-silo-imagery">Imagery</div>
+<div v-click class="uc-silo uc-silo-sensors">Sensor exports</div>
+<div v-click class="uc-silo uc-silo-rtk">RTK files</div>
+<div v-click class="uc-silo uc-silo-activity">Activity logs</div>
+<div v-click class="uc-silo uc-silo-samples">Samples</div>
+<div v-click class="uc-silo uc-silo-archives">Archives</div>
 </div>
 
-<div class="uc-silo-caption">
+<div v-click class="uc-silo-caption">
 Different collection paths. Different handoffs. No shared view of the farm.
 </div>
 
@@ -218,6 +220,7 @@ from day one.
 ---
 layout: section
 class: uc-section uc-section-photo uc-vision
+transition: fade
 ---
 
 # The vision
@@ -316,6 +319,7 @@ data was stored, and presents one honest, explorable view.
 ---
 layout: section
 class: uc-section uc-section-photo uc-hood
+transition: fade
 ---
 
 # Under the hood
@@ -354,19 +358,13 @@ layout: default
 
 # Watching the season turn
 
-<div class="uc-season-row mt-9">
-  <figure>
-    <img src="/farm/generated/season-jan.jpg" alt="NDVI, January 20: mixed winter cover, east beds bare">
-    <figcaption class="uc-season-cap"><strong>January 20</strong> · winter cover</figcaption>
-  </figure>
-  <figure>
-    <img src="/farm/generated/season-mar.jpg" alt="NDVI, March 25: peak green across nearly every field">
-    <figcaption class="uc-season-cap"><strong>March 25</strong> · peak green</figcaption>
-  </figure>
-  <figure>
-    <img src="/farm/generated/season-apr.jpg" alt="NDVI, April 28: cut hay drying in windrows before baling">
-    <figcaption class="uc-season-cap"><strong>April 28</strong> · hay drying</figcaption>
-  </figure>
+<div class="uc-season-fade mt-6">
+  <img src="/farm/generated/season-jan.jpg" alt="NDVI, January 20: mixed winter cover, east beds bare">
+  <img v-click="1" src="/farm/generated/season-mar.jpg" alt="NDVI, March 25: peak green across nearly every field">
+  <img v-click="2" src="/farm/generated/season-apr.jpg" alt="NDVI, April 28: cut hay drying in windrows before baling">
+  <div class="uc-season-chip" v-click.hide="1"><strong>January 20</strong> · winter cover</div>
+  <div class="uc-season-chip" v-click="[1,2]"><strong>March 25</strong> · peak green</div>
+  <div class="uc-season-chip" v-click="2"><strong>April 28</strong> · hay drying</div>
 </div>
 
 <div class="uc-callout mt-6">
@@ -412,9 +410,9 @@ layout: default
   <div class="uc-arch-node">Irrigations</div>
 </div>
 
-<div class="uc-arch-pipe" aria-hidden="true"></div>
+<div v-click="1" class="uc-arch-pipe" aria-hidden="true"></div>
 
-<div class="uc-arch-core">
+<div v-click="1" class="uc-arch-core">
   <div class="uc-arch-step">Ingest &amp; standardize</div>
   <div class="uc-arch-layer">
     <div class="uc-arch-layer-title">Unified data layer</div>
@@ -423,9 +421,9 @@ layout: default
   <div class="uc-arch-step">Maps · time series · imagery</div>
 </div>
 
-<div class="uc-arch-pipe" aria-hidden="true"></div>
+<div v-click="2" class="uc-arch-pipe" aria-hidden="true"></div>
 
-<div class="uc-arch-group uc-arch-audiences">
+<div v-click="2" class="uc-arch-group uc-arch-audiences">
   <div class="uc-arch-label">People</div>
   <div class="uc-arch-node">Researchers</div>
   <div class="uc-arch-node">Students</div>
@@ -470,6 +468,7 @@ Open standards end to end — PostgreSQL, STAC, COGs — so the template can tra
 ---
 layout: default
 class: uc-livemap-slide
+transition: slide-up
 ---
 
 # Imagery pipeline · live demo 🤞
@@ -540,25 +539,25 @@ The public data layer turns field observations into reusable records — and mak
 <div class="uc-metric-grid mt-6">
 
 <div class="uc-metric uc-metric-feature">
-<div class="uc-metric-num">8,247</div>
+<div class="uc-metric-num"><CountUp :to="8247" src="https://esf.ucmerced.edu/api/export/soil-samples.count" /></div>
 <div class="uc-metric-label">soil-analysis result rows</div>
 <div class="uc-metric-detail">One row per analyte, with depth, date, location, unit, and method.</div>
 </div>
 
 <div class="uc-metric">
-<div class="uc-metric-num">212</div>
+<div class="uc-metric-num"><CountUp :to="212" /></div>
 <div class="uc-metric-label">mapped soil locations</div>
 <div class="uc-metric-detail">A 2025 sampling grid tied back to the field map.</div>
 </div>
 
 <div class="uc-metric">
-<div class="uc-metric-num">22</div>
+<div class="uc-metric-num"><CountUp :to="22" /></div>
 <div class="uc-metric-label">high-resolution drone datasets</div>
 <div class="uc-metric-detail">RGB and multispectral assets at roughly 1.9–5.4 cm per pixel.</div>
 </div>
 
 <div class="uc-metric">
-<div class="uc-metric-num">511</div>
+<div class="uc-metric-num"><CountUp :to="511" /></div>
 <div class="uc-metric-label">logged irrigations</div>
 <div class="uc-metric-detail">Recorded by the irrigation automation system.</div>
 </div>
@@ -599,22 +598,22 @@ layout: default
 
 <div class="uc-timeline mt-4">
 
-<div class="uc-tl-item">
+<div v-click class="uc-tl-item">
 <div class="uc-tl-dot"></div>
 <div class="uc-tl-body"><h4>AI-assisted capture</h4>Turn voice and photo entry into structured field records.</div>
 </div>
 
-<div class="uc-tl-item">
+<div v-click class="uc-tl-item">
 <div class="uc-tl-dot"></div>
 <div class="uc-tl-body"><h4>Ask the farm</h4>Query fields, soil, irrigation, and imagery with source-linked answers.</div>
 </div>
 
-<div class="uc-tl-item">
+<div v-click class="uc-tl-item">
 <div class="uc-tl-dot"></div>
 <div class="uc-tl-body"><h4>Publish more</h4>Add activity and irrigation records to the public catalog.</div>
 </div>
 
-<div class="uc-tl-item">
+<div v-click class="uc-tl-item">
 <div class="uc-tl-dot"></div>
 <div class="uc-tl-body"><h4>Integrated compute</h4>Run notebooks and jobs beside STAC and COG data.</div>
 </div>

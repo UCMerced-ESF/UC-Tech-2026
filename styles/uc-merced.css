@@ -1257,3 +1257,47 @@ em { color: inherit; }
   font-size: 2rem;
   margin-bottom: 0.4rem;
 }
+
+/* v-click reveals: gentle rise-in instead of hard cut */
+.slidev-vclick-target {
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.slidev-vclick-hidden {
+  transform: translateY(10px);
+}
+
+/* season crossfade */
+.uc-season-fade {
+  position: relative;
+  height: 19rem;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--uc-shadow);
+}
+.uc-season-fade img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.uc-season-fade .slidev-vclick-target {
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.uc-season-fade .slidev-vclick-hidden {
+  transform: none;
+}
+.uc-season-chip {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  font-size: 0.82rem;
+  color: #fff;
+  background: rgba(14, 22, 33, 0.78);
+  padding: 5px 13px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+}
+.uc-season-chip strong {
+  color: var(--uc-gold);
+}
