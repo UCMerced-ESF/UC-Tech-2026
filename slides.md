@@ -60,6 +60,7 @@ into something people can actually explore and learn from.
 ---
 layout: section
 class: uc-section uc-section-photo uc-living
+transition: fade
 ---
 
 # A living research farm
@@ -88,9 +89,9 @@ farm into a living data system.
 
 <div class="uc-stat-stack">
 
-<div class="uc-stat"><span class="uc-stat-num">28</span><span class="uc-stat-label">fields tracked on the farm today</span></div>
-<div class="uc-stat"><span class="uc-stat-num">40.6</span><span class="uc-stat-label">acres under active management</span></div>
-<div class="uc-stat"><span class="uc-stat-num">75%</span><span class="uc-stat-label">of field capacity in use right now</span></div>
+<div class="uc-stat"><span class="uc-stat-num"><CountUp :to="28" /></span><span class="uc-stat-label">fields tracked on the farm today</span></div>
+<div class="uc-stat"><span class="uc-stat-num"><CountUp :to="40.6" :decimals="1" /></span><span class="uc-stat-label">acres under active management</span></div>
+<div class="uc-stat"><span class="uc-stat-num"><CountUp :to="75" suffix="%" /></span><span class="uc-stat-label">of field capacity in use right now</span></div>
 
 </div>
 
@@ -146,6 +147,7 @@ and <strong>distributed</strong> in a different way.
 ---
 layout: section
 class: uc-section uc-section-photo uc-problem
+transition: fade
 ---
 
 # The problem
@@ -167,7 +169,7 @@ equipment, field activities, samples, and archives.
 
 Each workflow has its own tools, formats, permissions, and local context.
 
-<div class="uc-silo-result">
+<div v-click="8" class="uc-silo-result">
 The issue is not that data is missing. It is that useful records become hard to
 <strong>find, interpret, and reuse</strong> after the original project moves on.
 </div>
@@ -177,15 +179,15 @@ The issue is not that data is missing. It is that useful records become hard to
 <div>
 
 <div class="uc-silos" aria-label="Fragmented data silos">
-<div class="uc-silo uc-silo-imagery">Imagery</div>
-<div class="uc-silo uc-silo-sensors">Sensor exports</div>
-<div class="uc-silo uc-silo-rtk">RTK files</div>
-<div class="uc-silo uc-silo-activity">Activity logs</div>
-<div class="uc-silo uc-silo-samples">Samples</div>
-<div class="uc-silo uc-silo-archives">Archives</div>
+<div v-click class="uc-silo uc-silo-imagery">Imagery</div>
+<div v-click class="uc-silo uc-silo-sensors">Sensor exports</div>
+<div v-click class="uc-silo uc-silo-rtk">RTK files</div>
+<div v-click class="uc-silo uc-silo-activity">Activity logs</div>
+<div v-click class="uc-silo uc-silo-samples">Samples</div>
+<div v-click class="uc-silo uc-silo-archives">Archives</div>
 </div>
 
-<div class="uc-silo-caption">
+<div v-click class="uc-silo-caption">
 Different collection paths. Different handoffs. No shared view of the farm.
 </div>
 
@@ -216,42 +218,9 @@ from day one.
 <img class="uc-headstart-photo" src="/farm/drone-w-sky-bg-2000w.jpg" alt="Drone in flight against open sky above the Experimental Smart Farm">
 
 ---
-layout: default
----
-
-# What fragmentation costs us
-
-<div class="uc-cost-grid mt-6">
-
-<div class="uc-cost">
-<h3>Hard to reuse</h3>
-A dataset that makes sense to its collector is opaque to the next researcher.
-Knowledge walks out the door when people do.
-</div>
-
-<div class="uc-cost">
-<h3>Hard to learn from</h3>
-Students and growers can't explore what they can't reach. The farm's story is
-locked in formats only specialists can open.
-</div>
-
-<div class="uc-cost">
-<h3>Hard to combine</h3>
-The interesting questions live <em>across</em> streams — imagery against soil,
-weather against yield. Silos make that the hard part.
-</div>
-
-<div class="uc-cost">
-<h3>Reinvented every time</h3>
-Every new project rebuilds the same plumbing from scratch instead of building
-on what already works.
-</div>
-
-</div>
-
----
 layout: section
 class: uc-section uc-section-photo uc-vision
+transition: fade
 ---
 
 # The vision
@@ -272,7 +241,7 @@ needing to know where the data came from or how it was stored.
 
 </div>
 
-<div class="uc-pillar-grid mt-10">
+<div class="uc-pillar-grid mt-8">
 
 <div class="uc-pillar">
 <div class="uc-pillar-num">01</div>
@@ -305,22 +274,19 @@ layout: default
 <div class="uc-aud">
 <img class="uc-aud-photo" src="/farm/soil-sample-team-2000w.jpg" alt="UC Merced researchers soil sampling in the field">
 <h3>Researchers</h3>
-A reliable, shared substrate for cross-stream questions — and data that
-outlives any single project or grad student.
+A shared foundation for cross-stream questions that outlives any one project.
 </div>
 
 <div class="uc-aud">
 <img class="uc-aud-photo" src="/farm/kat-inspecting-plants-2000w.jpg" alt="A student inspecting plants up close in the greenhouse">
 <h3>Students</h3>
-A way in. Explore real, current farm data without first learning four
-specialist toolchains.
+Explore real farm data without first learning specialist toolchains.
 </div>
 
 <div class="uc-aud">
 <img class="uc-aud-photo" src="/farm/farm-manager-2000w.jpg" alt="A Central Valley grower walking a field next to a truck">
 <h3>Central Valley growers</h3>
-Insight from a working farm in their own region — research that connects
-back to the people farming next door.
+Regional research that connects directly back to the people farming next door.
 </div>
 
 </div>
@@ -353,53 +319,12 @@ data was stored, and presents one honest, explorable view.
 ---
 layout: section
 class: uc-section uc-section-photo uc-hood
+transition: fade
 ---
 
 # Under the hood
 
 <div class="uc-section-sub">What it takes to make a farm legible</div>
-
----
-layout: default
----
-
-# How the pieces fit together
-
-<div class="uc-architecture">
-
-<div class="uc-arch-group uc-arch-sources">
-  <div class="uc-arch-label">Sources</div>
-  <div class="uc-arch-node">Drone flights</div>
-  <div class="uc-arch-node">Soil &amp; weather sensors</div>
-  <div class="uc-arch-node">Equipment GPS / RTK</div>
-  <div class="uc-arch-node">Historical archives</div>
-</div>
-
-<div class="uc-arch-pipe" aria-hidden="true"></div>
-
-<div class="uc-arch-core">
-  <div class="uc-arch-step">Ingest &amp; standardize</div>
-  <div class="uc-arch-layer">
-    <div class="uc-arch-layer-title">Unified data layer</div>
-    <div class="uc-arch-layer-sub">common formats · shared keys</div>
-  </div>
-  <div class="uc-arch-step">Maps · time series · imagery</div>
-</div>
-
-<div class="uc-arch-pipe" aria-hidden="true"></div>
-
-<div class="uc-arch-group uc-arch-audiences">
-  <div class="uc-arch-label">People</div>
-  <div class="uc-arch-node">Researchers</div>
-  <div class="uc-arch-node">Students</div>
-  <div class="uc-arch-node">Growers</div>
-</div>
-
-</div>
-
-<div class="uc-callout mt-6">
-The hard, reusable work lives in the middle: <strong>ingest &amp; standardize</strong> and the <strong>unified layer</strong>.
-</div>
 
 ---
 layout: default
@@ -417,9 +342,9 @@ layout: default
 
 <div class="uc-layer-labels">
   <div><span class="uc-dot" style="background:#8fa3bc"></span>LiDAR terrain</div>
-  <div><span class="uc-dot" style="background:#e3aa2f"></span>Canopy height</div>
-  <div><span class="uc-dot" style="background:#489b53"></span>NDVI</div>
-  <div><span class="uc-dot" style="background:#c04a2e"></span>Thermal</div>
+  <div><span class="uc-dot" style="background:#f29d6d"></span>Canopy height</div>
+  <div><span class="uc-dot" style="background:#2b5a34"></span>NDVI</div>
+  <div><span class="uc-dot" style="background:#de744f"></span>Thermal</div>
   <div><span class="uc-dot" style="background:#3f5e43"></span>True color</div>
 </div>
 
@@ -433,19 +358,13 @@ layout: default
 
 # Watching the season turn
 
-<div class="uc-season-row mt-9">
-  <figure>
-    <img src="/farm/generated/season-jan.jpg" alt="NDVI, January 20: mixed winter cover, east beds bare">
-    <figcaption class="uc-season-cap"><strong>January 20</strong> · winter cover</figcaption>
-  </figure>
-  <figure>
-    <img src="/farm/generated/season-mar.jpg" alt="NDVI, March 25: peak green across nearly every field">
-    <figcaption class="uc-season-cap"><strong>March 25</strong> · peak green</figcaption>
-  </figure>
-  <figure>
-    <img src="/farm/generated/season-apr.jpg" alt="NDVI, April 28: cut hay drying in windrows before baling">
-    <figcaption class="uc-season-cap"><strong>April 28</strong> · hay drying</figcaption>
-  </figure>
+<div class="uc-season-fade mt-6">
+  <img src="/farm/generated/season-jan.jpg" alt="NDVI, January 20: mixed winter cover, east beds bare">
+  <img v-click="1" src="/farm/generated/season-mar.jpg" alt="NDVI, March 25: peak green across nearly every field">
+  <img v-click="2" src="/farm/generated/season-apr.jpg" alt="NDVI, April 28: cut hay drying in windrows before baling">
+  <div class="uc-season-chip" v-click.hide="1"><strong>January 20</strong> · winter cover</div>
+  <div class="uc-season-chip" v-click="[1,2]"><strong>March 25</strong> · peak green</div>
+  <div class="uc-season-chip" v-click="2"><strong>April 28</strong> · hay drying</div>
 </div>
 
 <div class="uc-callout mt-6">
@@ -477,6 +396,100 @@ Irrigated ground holds <strong>21&nbsp;°C</strong> while cut hay bakes at <stro
 layout: default
 ---
 
+# How the pieces fit together
+
+<div class="uc-architecture">
+
+<div class="uc-arch-group uc-arch-sources">
+  <div class="uc-arch-label">Sources</div>
+  <div class="uc-arch-node">Drone flights</div>
+  <div class="uc-arch-node">Soil &amp; weather sensors</div>
+  <div class="uc-arch-node">Equipment GPS / RTK</div>
+  <div class="uc-arch-node">Historical archives</div>
+  <div class="uc-arch-node">Field activities</div>
+  <div class="uc-arch-node">Irrigations</div>
+</div>
+
+<div v-click="1" class="uc-arch-pipe" aria-hidden="true"></div>
+
+<div v-click="1" class="uc-arch-core">
+  <div class="uc-arch-step">Ingest &amp; standardize</div>
+  <div class="uc-arch-layer">
+    <div class="uc-arch-layer-title">Unified data layer</div>
+    <div class="uc-arch-layer-sub">common formats · shared keys</div>
+  </div>
+  <div class="uc-arch-step">Maps · time series · imagery</div>
+</div>
+
+<div v-click="2" class="uc-arch-pipe" aria-hidden="true"></div>
+
+<div v-click="2" class="uc-arch-group uc-arch-audiences">
+  <div class="uc-arch-label">People</div>
+  <div class="uc-arch-node">Researchers</div>
+  <div class="uc-arch-node">Students</div>
+  <div class="uc-arch-node">Growers</div>
+</div>
+
+</div>
+
+---
+layout: default
+class: uc-spec-slide
+---
+
+<h1 class="uc-spec-title">An open geospatial stack connects the farm</h1>
+
+<div class="uc-spec-grid mt-4">
+
+<div class="uc-spec-col">
+<div class="uc-card-eyebrow">Software</div>
+<div class="uc-spec"><strong>PostGIS / PostgreSQL</strong> — spatial core for field geometry, crop seasons, and sample footprints</div>
+<div class="uc-spec"><strong>Supabase</strong> — REST APIs, authentication, and row-level security</div>
+<div class="uc-spec"><strong>TiTiler + STAC</strong> — cloud-optimized GeoTIFFs and on-demand band combinations</div>
+<div class="uc-spec"><strong>Mapbox</strong> — interactive maps for web and native mobile clients</div>
+<div class="uc-spec"><strong>Time-series store</strong><span class="uc-spec-status">In build</span> — high-frequency sensor telemetry</div>
+</div>
+
+<div class="uc-spec-col">
+<div class="uc-card-eyebrow">Hardware</div>
+<div class="uc-spec"><strong>Drone payloads</strong> — RGB, multispectral, thermal, and LiDAR</div>
+<div class="uc-spec"><strong>RTK GNSS base station</strong> — centimeter-grade positioning across the farm</div>
+<div class="uc-spec"><strong>Eddy covariance tower</strong> — continuous flux and microclimate record</div>
+<div class="uc-spec"><strong>Soil &amp; weather sensors</strong> — moisture, temperature, and weather across plots</div>
+<div class="uc-spec"><strong>Autonomous weeding robot</strong><span class="uc-spec-status">Field testing</span> — newest incoming data stream</div>
+</div>
+
+</div>
+
+<div class="uc-callout mt-3">
+Open standards end to end — PostgreSQL, STAC, COGs — so the template can travel.
+</div>
+
+---
+layout: default
+class: uc-livemap-slide
+transition: slide-up
+---
+
+# Imagery pipeline · live demo 🤞
+
+<div class="uc-livemap mt-4">
+<FarmMap />
+</div>
+
+<!--
+Speaker notes: Nothing here is a screenshot — field boundaries stream from the
+platform's API and every tile is rendered on demand by TiTiler.
+Pan and zoom — this is the actual production stack at
+esf.ucmerced.edu serving tiles to the slide right now. Switch True color →
+NDVI → Thermal to show one COG becoming different products on the fly.
+If the venue wifi dies, the previous slide shows the same idea statically.
+-->
+
+---
+layout: default
+---
+
 # What it looks like today
 
 <div class="uc-proof-shot mt-3">
@@ -499,7 +512,7 @@ layout: default
 <img src="/app/esf-field-management.jpg" alt="FarmKit field management dashboard showing 28 fields, 40.6 acres of coverage, and 75% utilization">
 <div class="uc-dual-shot-cap">
 <h4>Field management</h4>
-<p>Every boundary, crop, and season tracked in one place — the bookkeeping layer FarmLink's unify step builds on.</p>
+<p>Boundaries, crops, and seasons tracked in one place.</p>
 </div>
 </div>
 
@@ -507,50 +520,7 @@ layout: default
 <img src="/app/esf-equipment-management.jpg" alt="FarmKit equipment management dashboard showing 140 pieces of equipment across 18 locations">
 <div class="uc-dual-shot-cap">
 <h4>Equipment &amp; inventory</h4>
-<p>140 pieces of equipment checked in and out across 18 locations — operations data, not just sensor data.</p>
-</div>
-</div>
-
-</div>
-
----
-layout: two-cols
-layoutClass: gap-10
----
-
-# Grounded in real data work
-
-We're not starting from a blank page. The building blocks already exist as
-working pieces — each one a stream FarmLink brings together.
-
-::right::
-
-<div class="uc-feed">
-
-<div class="uc-feed-item">
-<img class="uc-feed-photo" src="/farm/drone-2000w.jpg" alt="Drone flight over the farm">
-<div class="uc-feed-text">
-<h4>Drone imagery → georeferenced maps</h4>
-Aerial flights processed into orthomosaics, tied to ground control in a
-real coordinate system so layers actually line up.
-</div>
-</div>
-
-<div class="uc-feed-item">
-<img class="uc-feed-photo" src="/farm/rtk-gps-800w.jpg" alt="RTK base station">
-<div class="uc-feed-text">
-<h4>Centimeter positioning</h4>
-A real-time correction (RTK) base station on the farm anchors equipment and
-imagery to the same precise locations.
-</div>
-</div>
-
-<div class="uc-feed-item">
-<img class="uc-feed-photo" src="/farm/eddy-covariance-tower-sensor1-2000w.jpg" alt="Eddy covariance tower collecting climate data">
-<div class="uc-feed-text">
-<h4>Decades of climate context</h4>
-Historical evapotranspiration and weather, pulled in to give today's readings
-a long-term baseline.
+<p>140 assets tracked across 18 locations — operations data, not just sensor data.</p>
 </div>
 </div>
 
@@ -560,127 +530,92 @@ a long-term baseline.
 layout: default
 ---
 
-# Example: decades of context, on tap
+<h1 class="uc-metric-title">The platform already has a measurable footprint</h1>
 
-<div class="uc-context-slide mt-4">
-
-<div>
-
-One early integration: stitching in a **multi-decade record** of
-evapotranspiration and climate for the Merced area from a public gridded
-dataset.
-
-It turns a single day's sensor reading into a question worth asking:
-
-<div class="uc-quote">"Is this August dry — or dry <em>for an August</em>?"</div>
-
-That long baseline is exactly the kind of context a grower or student can't
-easily assemble on their own, surfaced automatically.
-
+<div class="uc-metric-intro">
+The public data layer turns field observations into reusable records — and makes the scale visible.
 </div>
 
-<div class="uc-stat-stack">
-<div class="uc-stat"><span class="uc-stat-num">47</span><span class="uc-stat-label">years of climate history integrated</span></div>
-<div class="uc-stat"><span class="uc-stat-num">1</span><span class="uc-stat-label">query — no data wrangling required</span></div>
+<div class="uc-metric-grid mt-6">
+
+<div class="uc-metric uc-metric-feature">
+<div class="uc-metric-num"><CountUp :to="8247" src="https://esf.ucmerced.edu/api/export/soil-samples.count" /></div>
+<div class="uc-metric-label">soil-analysis result rows</div>
+<div class="uc-metric-detail">One row per analyte, with depth, date, location, unit, and method.</div>
 </div>
 
+<div class="uc-metric">
+<div class="uc-metric-num"><CountUp :to="212" /></div>
+<div class="uc-metric-label">mapped soil locations</div>
+<div class="uc-metric-detail">A 2025 sampling grid tied back to the field map.</div>
 </div>
 
-<div class="uc-note mt-6">
-And it taught us the unglamorous truths: silent-failure data sources, scale
-factors, grid snapping. Lessons that now make the <em>next</em> integration faster.
+<div class="uc-metric">
+<div class="uc-metric-num"><CountUp :to="22" /></div>
+<div class="uc-metric-label">high-resolution drone datasets</div>
+<div class="uc-metric-detail">RGB and multispectral assets at roughly 1.9–5.4 cm per pixel.</div>
 </div>
 
----
-layout: default
----
-
-# Reusable by design
-
-<div class="mt-4 text-xl leading-relaxed">
-
-The flood of sensor and imagery data isn't unique to one farm. It's the shape
-of modern research across UC.
-
-</div>
-
-<div class="uc-reuse-grid mt-8">
-
-<div class="uc-reuse">
-<h3>The pattern repeats</h3>
-Any group drowning in heterogeneous sensor and imagery data faces the same
-ingest, standardize, and explore problem we're solving here.
-</div>
-
-<div class="uc-reuse">
-<h3>So we build it as a template</h3>
-The ingest and unification layer is designed to be lifted and adapted — so the
-next group inherits the plumbing instead of rebuilding it.
+<div class="uc-metric">
+<div class="uc-metric-num"><CountUp :to="511" /></div>
+<div class="uc-metric-label">logged irrigations</div>
+<div class="uc-metric-detail">Recorded by the irrigation automation system.</div>
 </div>
 
 </div>
 
-<div class="uc-callout mt-8">
-Solve it once on the farm. Hand the rest of UC a running start.
+<div class="uc-callout mt-6">
+The same data is available to people through the map and to software through <strong>CSV, GeoJSON, STAC, and COG</strong> interfaces.
 </div>
 
 ---
 layout: default
 ---
 
-# What we're learning
+# Sampling the ground truth
 
-<div class="uc-learn-grid mt-10">
-
-<div class="uc-learn">
-<div class="uc-learn-num">1</div>
-<h3>Integration is the product</h3>
-The value isn't any single sensor — it's the connective tissue that lets streams
-be seen together.
+<div class="uc-season-row mt-8">
+  <figure>
+    <img src="/farm/generated/soil-grid.jpg" alt="212 soil sample points colored by lab pH over the July 2025 drone orthomosaic, with field boundaries outlined">
+  </figure>
 </div>
 
-<div class="uc-learn">
-<div class="uc-learn-num">2</div>
-<h3>Real data is messy</h3>
-Silent failures, unit quirks, mismatched coordinates. Designing for the mess up
-front is what makes the result trustworthy.
+<div class="uc-layer-labels mt-2">
+  <div><span class="uc-dot" style="background:#ffadad"></span>Acidic · pH 5.4</div>
+  <div><span class="uc-dot" style="background:#190c09"></span>Median · 6.2</div>
+  <div><span class="uc-dot" style="background:#9eb0ff"></span>Alkaline · 7.6</div>
 </div>
 
-<div class="uc-learn">
-<div class="uc-learn-num">3</div>
-<h3>Access changes who participates</h3>
-The moment data is explorable, students and growers become contributors — not
-just an audience.
-</div>
-
+<div class="uc-callout mt-4">
+<strong>212 grid points</strong>, each cored at two depths in summer 2025 — lab chemistry mapped back to the exact spot it came from.
 </div>
 
 ---
 layout: default
 ---
 
-# Where we're headed
+<h1 class="uc-roadmap-title">The next phase makes the data easier to use</h1>
 
 <div class="uc-timeline mt-4">
 
-<div class="uc-tl-item">
+<div v-click class="uc-tl-item">
 <div class="uc-tl-dot"></div>
-<div class="uc-tl-body"><h4>Now</h4>Individual streams working — imagery, positioning, and climate context proven out as pieces.</div>
+<div class="uc-tl-body"><h4>AI-assisted capture</h4>Turn voice and photo entry into structured field records.</div>
 </div>
 
-<div class="uc-tl-item">
+<div v-click class="uc-tl-item">
 <div class="uc-tl-dot"></div>
-<div class="uc-tl-body"><h4>Next</h4>The unified layer: common formats and shared keys so streams line up in one view.</div>
+<div class="uc-tl-body"><h4>Ask the farm</h4>Query fields, soil, irrigation, and imagery with source-linked answers.</div>
 </div>
 
-<div class="uc-tl-item">
+<div v-click class="uc-tl-item">
 <div class="uc-tl-dot"></div>
-<div class="uc-tl-body"><h4>Then</h4>The explore experience — maps, time series, and imagery anyone can browse.</div>
+<div class="uc-tl-body"><h4>Publish more</h4>Add activity and irrigation records to the public catalog.</div>
 </div>
 
-<div class="uc-tl-item">
+<div v-click class="uc-tl-item">
 <div class="uc-tl-dot"></div>
-<div class="uc-tl-body"><h4>Beyond</h4>Package the approach as a reusable template for other UC groups.</div>
+<div class="uc-tl-body"><h4>Integrated compute</h4>Run notebooks and jobs beside STAC and COG data.</div>
 </div>
 
 </div>
@@ -688,8 +623,8 @@ layout: default
 <div class="uc-timeline-shot">
 <img src="/farm/weeding-robot-2000w.jpg" alt="An autonomous weeding robot being tested on the farm">
 <div class="uc-timeline-shot-cap">
-The farm keeps adding new instruments — like this autonomous weeding robot —
-which means new streams FarmLink needs to absorb, not new one-off pipelines.
+Each new instrument — like this autonomous weeding robot — becomes a queryable,
+reusable stream.
 </div>
 </div>
 
@@ -705,6 +640,16 @@ class: uc-closing
 <div class="uc-closing-sub">
 FarmLink turns raw field data into something people can explore, learn from,
 and build on — and makes the approach reusable across UC.
+</div>
+
+<div class="uc-sponsor-block" aria-label="Sponsors">
+<div class="uc-sponsor-label">Sponsors</div>
+<div class="uc-sponsor-strip">
+  <img src="/logos/ucop-aws.png" alt="AWS">
+  <img src="/logos/ucop-ibm.png" alt="IBM">
+  <img src="/logos/ucop-huron.png" alt="Huron">
+  <img src="/logos/ucop-google-cloud.png" alt="Google Cloud">
+</div>
 </div>
 
 <div class="uc-presenter mt-10">

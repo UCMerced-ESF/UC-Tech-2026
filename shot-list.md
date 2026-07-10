@@ -3,6 +3,9 @@
 Assets to collect for the UC Tech 2026 presentation. Drop new files into
 `public/app/` (screenshots) or `public/farm/` (photos), then we'll slot them in.
 
+*Slide numbers below are pre-Jul 2; three imagery slides were inserted at
+15–17, so anything ≥15 is now +3 (e.g. "slide 15" → 18).*
+
 ## Platform screenshots — highest impact
 
 - [ ] **1. Multispectral/NDVI layer rendered over a field** — the imagery
@@ -11,9 +14,9 @@ Assets to collect for the UC Tech 2026 presentation. Drop new files into
 - [ ] **2. Field detail / season timeline view** — one field's history: crop
   seasons across years, dated imagery for that field.
   → Companion for slide 14 (architecture); shows geometry-seasonality separation on screen.
-- [ ] **3. Soil sampling workflow** — sample points/transects on the map, or a
-  chain-of-custody record with lab attachments.
-  → New material for slide 17 ("Grounded in real data work"); headline paper capability, currently invisible in deck.
+- [ ] **3. Soil sampling workflow** — chain-of-custody record with lab
+  attachments (map half now covered by generated G4).
+  → "Grounded in real data work" slide; headline paper capability, currently invisible in deck.
 - [ ] **4. Mobile app screenshot** — field view in a phone frame (or see photo #8).
   → Deck currently only shows desktop web; paper touts native mobile clients.
 - [x] **5. Equipment dashboard on an active day** — DONE (Jul 2): replaced with
@@ -23,11 +26,32 @@ Assets to collect for the UC Tech 2026 presentation. Drop new files into
   highlighted against the long-term ET/weather baseline.
   → Slide 18 ("decades of context, on tap") — lands the "dry, or dry *for an August*?" quote.
 
+## Generated from data (GDAL pipeline — no collection needed)
+
+- [x] **G1. Layer collage** — DONE (Jul 2): terrain / canopy / NDVI / thermal /
+  true-color diagonal slices, slide 15 "One farm, many ways to see it".
+- [x] **G2. NDVI season strip** — DONE (Jul 2): Jan 20 / Mar 25 / Apr 28 on a
+  fixed scale, slide 16 "Watching the season turn".
+- [x] **G3. Thermal vs true-color pair** — DONE (Jul 2): 21–31 °C surface temp,
+  slide 17 "Seeing what the eye can't".
+- [x] **G4. Soil sampling grid map** — DONE (Jul 2): 212 summer-2025 grid
+  samples colored by lab pH over the July 16 2025 ortho, field boundaries
+  outlined; own slide "Sampling the ground truth" after "Grounded in real data
+  work". Covers the map half of screenshot #3. (eDNA points skipped — would
+  clutter; revisit if a soil-science slide appears.)
+- [ ] **G5. Full-farm ortho hero** — the whole Apr 28 mosaic; covers photo #7
+  and retires a duplicate. → Slide 4 drone card and/or a section background.
+- [ ] **G6. Resolution punch-in** — full farm → one orchard row → individual
+  plants at 4.4 cm/px, as a 3-step zoom strip. Lands "see every plant from the
+  air" without a word of text. → Slide 4 sensing story.
+- [ ] **G7. Canopy-height orchard close-up** — CHM crop where every tree is a
+  distinct measurable dot; "count and measure every tree in one LiDAR pass."
+  → Pairs with G6 or a future use-case slide.
+
 ## Field photography
 
-- [ ] **7. Drone orthomosaic output** — the stitched top-down mosaic itself,
-  showing plot boundaries (the product, not the aircraft).
-  → Slide 4 "Drone imagery" card.
+- [ ] **7. Drone orthomosaic output** — superseded by generated G5 (render the
+  Apr 28 mosaic straight from the COG, no photo needed).
 - [ ] **8. Someone using the platform outdoors** — tablet/phone in hand with the
   app open, crops in background.
   → Slide 11 (students), slide 20 (access changes who participates), or closing. Nothing currently connects the software to the farm.
@@ -48,8 +72,9 @@ Assets to collect for the UC Tech 2026 presentation. Drop new files into
 
 ## Top five if time is short
 
-**#1, #2, #6, #7, #8** — they fix the deck's biggest gap: it *talks about*
-making the farm explorable but only shows three static dashboard screenshots.
+**#1, #2, #6, #8** (+ generated G4/G5, no collection needed) — they fix the
+deck's biggest gap: it *talks about* making the farm explorable but only shows
+three static dashboard screenshots.
 
 ## Known duplicates the new photos retire
 
