@@ -104,8 +104,9 @@ onMounted(() => {
   map = new mapboxgl.Map({
     container: container.value,
     style: 'mapbox://styles/mapbox/satellite-streets-v12',
-    bounds: BOUNDS,
-    fitBoundsOptions: { padding: 30 },
+    // start tighter than the flight bbox; bump zoom to taste
+    center: [(BOUNDS[0] + BOUNDS[2]) / 2, (BOUNDS[1] + BOUNDS[3]) / 2],
+    zoom: 15.6,
     maxZoom: 22,
     attributionControl: false,
   })
